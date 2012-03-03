@@ -28,11 +28,13 @@ group :production do
   gem 'therubyracer'
 end
 
-group :test, :development do
+group :test do
   gem 'minitest'
+end
+
+group :development do
   gem 'guard'
   gem 'guard-minitest'
-  gem 'jasmine-rails'
 end
 
 gem 'backbone-on-rails'
