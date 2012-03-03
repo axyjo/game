@@ -7,8 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="brand" href="#">
+          GameName
+        </a>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <%= yield %>
+  </div>
 </body>
 </html>
