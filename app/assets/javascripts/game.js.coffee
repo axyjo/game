@@ -3,7 +3,9 @@ window.Game =
   Collections: {}
   Views: {}
   Routers: {}
-  init: -> alert 'Hello from Backbone!'
+  init: ->
+    new Game.Routers.Rounds()
+    Backbone.history.start(pushState: true)
 
 $(document).ready ->
   Game.init()
