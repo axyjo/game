@@ -28,6 +28,10 @@ group :production do
   gem 'therubyracer'
 end
 
+group :test do
+  gem 'minitest'
+end
+
 gem 'backbone-on-rails'
 
 # To use ActiveModel has_secure_password
