@@ -1,6 +1,10 @@
 Game::Application.routes.draw do
   resources :rounds
 
-  match '*path' => 'main#index' 
+  # OmniAuth session handling.
+  match '/auth/:provider/callback' => 'sessions#create'
+  match '/logout' => 'sessions#destroy'
+
+  match '*path' => 'main#index'
   root :to => 'main#index'
 end
