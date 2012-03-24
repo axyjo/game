@@ -23,6 +23,13 @@ end
 
 gem 'jquery-rails'
 
+group :authentication do
+  # Only pull in OAuth related gems instead of LDAP/Basic/OpenID/etc.
+  gem 'oa-core', :require => 'omniauth/core'
+  gem 'oa-oauth', :require => 'omniauth/oauth'
+  gem 'omniauth-google-oauth2'
+end
+
 group :production do
   gem 'execjs'
 end
