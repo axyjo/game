@@ -4,4 +4,5 @@ rvm:
   - 1.9.3
 before_script:
   - bundle exec rake db:setup
+  - cp config/database.sample.yml config/database.yml
   - psql -c 'create database game_test;' -U postgres
