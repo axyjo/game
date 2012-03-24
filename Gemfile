@@ -39,6 +39,9 @@ group :development do
   gem 'guard'
   gem 'guard-minitest'
   gem 'sqlite3'
+
+  # Use Thin instead of WEBrick.
+  gem 'thin'
 end
 
 gem 'backbone-on-rails'
