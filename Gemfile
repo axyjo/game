@@ -24,6 +24,7 @@ end
 gem 'jquery-rails'
 
 group :authentication do
+  gem 'omniauth-oauth2'
   gem 'omniauth-google-oauth2'
 end
 
