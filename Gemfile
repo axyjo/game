@@ -25,7 +25,6 @@ gem 'jquery-rails'
 
 group :production do
   gem 'execjs'
-  gem 'therubyracer'
 end
 
 group :test do
