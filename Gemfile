@@ -25,6 +25,7 @@ gem 'jquery-rails'
 
 group :authentication do
   gem "omniauth-google-oauth2", "~> 0.1.9"
+  gem "omniauth-identity"
 end
 
 group :production do
