@@ -15,7 +15,7 @@ class AuthenticationsController < ApplicationController
       session[:user_id] = auth.user_id
       redirect_to "/"
     elsif current_user
-      current_user.authentications.create(:provider => omniauth['provider'], :uid => omniauth['uid'])
+      current_user.authentications.create!(:provider => omniauth['provider'], :uid => omniauth['uid'])
     else
       u = User.create(:email => omniauth['info']['email'])
       if u.save
@@ -25,5 +25,10 @@ class AuthenticationsController < ApplicationController
         # User didn't validate. Probably, email already exists.
       end
     end
+  end
+
+  def logout
+    session[:user_id] = nil
+    redirect_to root_url
   end
 end
