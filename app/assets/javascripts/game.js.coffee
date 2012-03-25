@@ -7,6 +7,10 @@ window.Game =
     new Game.Routers.Rounds()
     Backbone.history.start(pushState: true)
 
+    $(window).resize ->
+      $("#map-container").height $(window).height() - $(".navbar").height()
+    $(window).resize()
+
     map = new L.Map 'map-container'
     cloudmade = new L.TileLayer 'http://{s}.tile.cloudmade.com/d61c80c52d2a4c999d39d804936296bd/997/256/{z}/{x}/{y}.png', {
       attribution: 'Map data &copy; OpenStreetMap',
@@ -20,6 +24,3 @@ window.Game =
 
 $(document).ready ->
   Game.init()
-  $(window).resize ->
-    $("#map-container").height $(window).height() - $(".navbar").height()
-  $(window).resize()
