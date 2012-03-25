@@ -34,6 +34,10 @@ end
 
 group :test do
   gem 'minitest'
+  gem 'database_cleaner'
+  gem 'jasminerice'
+  gem 'factory_girl_rails'
+  gem 'turn'
 end
 
 group :development do
