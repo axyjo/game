@@ -34,4 +34,8 @@ Game::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # Authentication
+  config.google_key = "625911022647.apps.googleusercontent.com"
+  config.google_secret = "GUas419AkhDvPcmjck1CPjIS"
 end

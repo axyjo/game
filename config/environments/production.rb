@@ -64,4 +64,8 @@ Game::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+
+  # Authentication
+  config.google_key = "625911022647-ivflknkmamft4nbs46h5elhsk7m2frkk.apps.googleusercontent.com"
+  config.google_secret = "aMcrh-j7FAJ4FcnHpciJY3g4"
 end
