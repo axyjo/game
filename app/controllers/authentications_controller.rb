@@ -24,7 +24,6 @@ class AuthenticationsController < ApplicationController
         flash[:notice] = "An account with your email address already exists. Please log in first."
       end
       redirect_to "/"
-      end
     end
   end
 
