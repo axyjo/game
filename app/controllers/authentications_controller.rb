@@ -21,6 +21,8 @@ class AuthenticationsController < ApplicationController
       if u.save
         session[:user_id] = u.id
         redirect_to "/"
+      else
+        # User didn't validate. Probably, email already exists.
       end
     end
   end
