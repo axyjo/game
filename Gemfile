@@ -38,6 +38,7 @@ group :test do
   gem 'jasminerice'
   gem 'factory_girl_rails'
   gem 'turn'
+  gem 'capybara'
 end
 
 group :development do
