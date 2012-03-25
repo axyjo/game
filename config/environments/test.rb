@@ -34,4 +34,8 @@ Game::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+
+  # Authentication
+  config.google_key = "625911022647.apps.googleusercontent.com"
+  config.google_secret = "GUas419AkhDvPcmjck1CPjIS"
 end
