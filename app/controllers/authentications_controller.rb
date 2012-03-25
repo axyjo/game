@@ -20,9 +20,10 @@ class AuthenticationsController < ApplicationController
       u = User.create(:email => omniauth['info']['email'])
       if u.save
         session[:user_id] = u.id
-        redirect_to "/"
       else
-        # User didn't validate. Probably, email already exists.
+        flash[:notice] = "An account with your email address already exists. Please log in first."
+      end
+      redirect_to "/"
       end
     end
   end
