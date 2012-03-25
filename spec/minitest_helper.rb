@@ -1,6 +1,7 @@
 ENV["RAILS_ENV"] = "test"
 require File.expand_path("../../config/environment", __FILE__)
-require "minitest/autorun"
+begin; require 'minitest/autorun'; rescue LoadError; end
+begin; require 'turn/autorun'; rescue LoadError; end
 
 # Database cleaner.
 DatabaseCleaner.strategy = :truncation
