@@ -10,14 +10,14 @@ class AuthenticationsController < ApplicationController
 
   def create
     omniauth = request.env["omniauth.auth"]
-    auth = Authentication.find_by_provider_and_uid(omniauth['provider'], auth['uid'])
+    auth = Authentication.find_by_provider_and_uid(omniauth['provider'], omniauth['uid'])
     if auth
       session[:user_id] = auth.user_id
       redirect_to "/"
     elsif current_user
-      current_user.authentications.create(:provider => auth['provider'], :uid => auth['uid'])
+      current_user.authentications.create(:provider => omniauth['provider'], :uid => omniauth['uid'])
     else
-      u = User.create(:email => auth['info']['email'])
+      u = User.create(:email => omniauth['info']['email'])
       if u.save
         session[:user_id] = u.id
         redirect_to "/"
