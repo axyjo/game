@@ -35,6 +35,7 @@ GEM
       ejs (~> 1.0.0)
       jquery-rails
       railties (>= 3.1)
+    bcrypt-ruby (3.0.1)
     bootstrap-sass (2.0.1)
     builder (3.0.0)
     capistrano (2.11.2)
@@ -172,6 +173,7 @@ PLATFORMS
 
 DEPENDENCIES
   backbone-on-rails
+  bcrypt-ruby (~> 3.0.0)
   bootstrap-sass (~> 2.0.1)
   capistrano
   coffee-rails (~> 3.2.1)
