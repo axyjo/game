@@ -10,3 +10,6 @@ class MiniTest::Spec
     DatabaseCleaner.clean
   end
 end
+
+# Configure reporting style for tests.
+Turn.config.format = :cue
