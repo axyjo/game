@@ -19,6 +19,7 @@ class AuthenticationsController < ApplicationController
     else
       u = User.create(:email => omniauth['info']['email'])
       if u.save
+        u.authentications.create!(:provider => omniauth['provider'], :uid => omniauth['uid'])
         session[:user_id] = u.id
       else
         flash[:notice] = "An account with your email address already exists. Please log in first."
