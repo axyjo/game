@@ -66,3 +66,6 @@ gem 'capistrano'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+# Install the newrelic_rpm gem for some metrics.
+gem 'newrelic_rpm'
